@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizMan Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        .dashboard-content {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BizMan Dashboard</h1>
+        <nav>
+            <button onclick="logout()">Log Out</button>
+        </nav>
+    </header>
+    <main>
+        <section class="dashboard-content">
+            <h2>Welcome to BizMan</h2>
+            <p>This is your retail management dashboard. You can add features here.</p>
+        </section>
+    </main>
+    
+    <script>
+        function logout() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
