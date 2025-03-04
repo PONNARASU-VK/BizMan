@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizMan - Retail Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>BizMan</h1>
+        <nav>
+            <button onclick="showLogin()">Log In</button>
+            <button onclick="showSignup()">Sign Up</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Manage Your Retail Business with Ease</h2>
+            <p>BizMan provides a seamless experience to manage your store, inventory, and customers efficiently.</p>
+        </section>
+    </main>
+    
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h3>Login</h3>
+            <input type="text" id="login-username" placeholder="Username">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Submit</button>
+            <button onclick="closeModal('login-modal')">Close</button>
+        </div>
+    </div>
+    
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <h3>Sign Up</h3>
+            <input type="text" id="signup-name" placeholder="Full Name">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <button onclick="signup()">Register</button>
+            <button onclick="closeModal('signup-modal')">Close</button>
+        </div>
+    </div>
+    
+    <script>
+        function showLogin() {
+            document.getElementById('login-modal').style.display = 'block';
+        }
+        
+        function showSignup() {
+            document.getElementById('signup-modal').style.display = 'block';
+        }
+        
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        
+        function login() {
+            window.location.href = 'dashboard.html';
+        }
+        
+        function signup() {
+            alert('Account created! Please log in.');
+            closeModal('signup-modal');
+        }
+    </script>
+</body>
+</html>
