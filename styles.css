@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e3f2fd;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0066cc, #0099ff);
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav button {
+    background: #ff6f61;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav button:hover {
+    transform: scale(1.1);
+    background: #ff3b30;
+}
+
+/* Dashboard Container */
+main {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.dashboard-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.dashboard-content h2 {
+    font-size: 30px;
+    color: #004d99;
+    font-weight: 600;
+}
+
+.dashboard-content p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #0066cc;
+    box-shadow: 0px 4px 10px rgba(0, 102, 204, 0.2);
+}
+
+button {
+    background: linear-gradient(135deg, #0066cc, #0099ff);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #005bb5, #007acc);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
